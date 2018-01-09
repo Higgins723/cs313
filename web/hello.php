@@ -3,9 +3,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <?php
-                echo "Hello World!";
-            ?>
+            <h1>
+                <?php
+                    echo "Hello World!";
+                ?>
+            </h1>
         </div>
     </div>
 </div>

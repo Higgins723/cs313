@@ -31,7 +31,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assignments</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Week 01</a>
+              <a class="dropdown-item" href="hello.php">Week 01</a>
             </div>
           </li>
         </ul>

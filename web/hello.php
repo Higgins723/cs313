@@ -1,7 +1,13 @@
 <?php include("header.php");?>
 
-<?php
-    echo "Hello World!";
-?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <?php
+                echo "Hello World!";
+            ?>
+        </div>
+    </div>
+</div>
 
 <?php include("footer.php");?>

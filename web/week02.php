@@ -8,6 +8,12 @@
             <h1>Week 02</h1>
             <div class="div1">
                 <p>Div 1</p>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control newcolor" placeholder="Enter color here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" onclick(changeColor($('.newcolor').val())) form-control type="button">Change Color</button>
+                  </div>
+                </div>
             </div>
             <div class="div2">
                 <p>Div 2</p>

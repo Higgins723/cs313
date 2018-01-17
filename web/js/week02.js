@@ -4,5 +4,6 @@ function week02Alert()
 };
 
 $(function changeColor(color){
+    console.log(color);
     $(".div1").css("background", color);
 }); 

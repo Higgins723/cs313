@@ -9,5 +9,6 @@ $(function changeColor(color){
 }); 
 
 $("#colorChange").click(function(){
-    changeColor($('.newcolor').val());
+    var color = $('.newcolor').val();
+    changeColor(color);
 });

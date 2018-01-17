@@ -10,5 +10,5 @@ function changeColor(color)
 
 function toggleDiv3()
 {
-    $('.div3').toggle();
+    $('.div3').toggle("slow", "linear");
 };

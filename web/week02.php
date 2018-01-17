@@ -11,7 +11,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control newcolor" placeholder="Enter color here" aria-label="Recipient's username" aria-describedby="basic-addon2">
                   <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" onclick="(changeColor($('.newcolor').attr('value')))" type="button">Change Color</button>
+                    <button id="colorChange" class="btn btn-outline-secondary" type="button">Change Color</button>
                   </div>
                 </div>
             </div>
@@ -29,9 +29,9 @@
 
 <script src="js/week02.js"></script>
 <script
-              src="https://code.jquery.com/jquery-3.2.1.min.js"
-              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-              crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
         
 
 <?php include("includes/footer.php");?>

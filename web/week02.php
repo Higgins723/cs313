@@ -11,7 +11,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control newcolor" placeholder="Enter color here" aria-label="Recipient's username" aria-describedby="basic-addon2">
                   <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" onclick="(changeColor($('.newcolor').val()))" form-control type="button">Change Color</button>
+                    <button class="btn btn-outline-secondary" onclick="(changeColor($('.newcolor').attr('value')))" type="button">Change Color</button>
                   </div>
                 </div>
             </div>

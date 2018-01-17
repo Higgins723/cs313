@@ -20,6 +20,7 @@
             </div>
             <div class="div3">
                 <p>Div 3</p>
+                <button class="btn btn-primary" onclick="toggleDiv3()" type="button">Toggle Visibility</button>
             </div>
             <button type="button" onclick="week02Alert()"  class="btn btn-primary">Click Me</button>
         </div>
@@ -27,11 +28,6 @@
     <hr/>
 </div>
 
-<script src="js/week02.js"></script>
-<script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-        
+<script src="js/week02.js"></script> 
 
 <?php include("includes/footer.php");?>

@@ -7,3 +7,8 @@ function changeColor(color)
 {
     $(".div1").css("color", color);
 };
+
+function toggleDiv3()
+{
+    $('.div3').toggle();
+};

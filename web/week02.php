@@ -20,8 +20,9 @@
             </div>
             <div class="div3">
                 <p>Div 3</p>
-                <button class="btn btn-primary" onclick="toggleDiv3()" type="button">Toggle Visibility</button>
             </div>
+            <button class="btn btn-primary" onclick="toggleDiv3()" type="button">Toggle Visibility</button>
+            <hr/>
             <button type="button" onclick="week02Alert()"  class="btn btn-primary">Click Me</button>
         </div>
     </div>

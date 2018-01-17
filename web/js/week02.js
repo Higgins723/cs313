@@ -5,11 +5,5 @@ function week02Alert()
 
 function changeColor(color)
 {
-    console.log(color);
-    $(".div1").css("background", color);
+    $(".div1").css("color", color);
 };
-
-$("#colorChange").click(function(){
-    var color = $('.newcolor').val();
-    changeColor(color);
-});

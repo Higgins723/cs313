@@ -33,7 +33,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="hello.php">Week 01</a>
               <a class="dropdown-item" href="week02.php">Week 02</a>
-              <a class="dropdown-item" href=week03/index.html">Week 03</a>
+              <a class="dropdown-item" href=week03/index.php">Week 03</a>
             </div>
           </li>
         </ul>

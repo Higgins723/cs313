@@ -1,9 +1,10 @@
 <?php
-    include('login.php');
     include("../includes/header.php");
+    include("login.php");
 
-    if(isset($_SESSION['login_user'])){
-        header("location: profile.php");
+    // if logged in redirect to profile.php
+    if(isset($_SESSION["userId"])) {
+        header('Location: profile.php');
     }
 ?>
 
@@ -31,45 +32,24 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" id="submit" name="submit" type="submit">Login</button>      
             </form>
             <span style="color:red;"><?php echo $error; ?></span>
-            <hr/>
+            <br>
         </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
         <div class="col-md-12">
-            <h1>Your List</h1>
-            <?php
-                $user_id = 1;
-
-                $db = pg_connect("host=ec2-54-83-204-230.compute-1.amazonaws.com port=5432 dbname=d3543m9j6kgfsp user=fiaajpoaucvhfo password=8ea88d18e1cd3b174c4a8572cdd658544d8030a9b44769b0ab38299bddca0033");
-                $result = pg_query($db,"SELECT id, item, complete FROM shopping_list WHERE id = $user_id");
-                echo "<table class='table table-striped'>";
-                    echo "<thead class='thead-dark'>";
-                        echo "<tr>";
-                            echo "<th scope='col'>Item</th>";
-                            echo "<th scope='col'>Complete</th>";
-                            echo "<th scope='col'>Actions</th>";
-                        echo "</tr>";
-                    echo "</thead>";
-                    while($row=pg_fetch_assoc($result)){echo "<tr>";
-                        echo "<td>" . $row['item'] . "</td>";
-                        echo "<td>"; 
-                            if ($row['complete'] == 't'){
-                                echo "<i class='far fa-check-circle'></i>";
-                            } else {
-                                echo "<i class='far fa-square'></i>";
-                            }
-                        echo "</td>";
-                        echo "<td></td>";
-                    echo "</tr>";}
-                echo "</table>";
-            ?>
+            <h3>Login Information</h3>
+            <p>Create an account or use a testing username and password from below.</p>
+            <p>
+                Username: <b>admin</b><br>
+                Password: <b>password</b>
+            <p>
+            <p>
+                Username: <b>testingUser</b><br>
+                Password: <b>password1</b>
+            </p>
             <hr/>
         </div>
     </div>
 </div>
+
 
 <?php
     include("../includes/footer.php");

@@ -1,6 +1,11 @@
 <?php
     include("../includes/header.php");
-    include('session.php');
+    include("login.php");
+
+    // if not logged in redirect to index
+    if(!isset($_SESSION["userId"])) {
+        header('Location: index.php');
+    }
 ?>
 
 <nav style="margin-top: 4em;" class="navbar navbar-expand-md navbar-light bg-faded">
@@ -20,11 +25,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Your List</h1>
+        <h2>Hello <span style="font-style: italic;"><?php echo $_SESSION["user"]; ?></span> here is your list:</h2>
             <span><?php echo $login_session; ?></span>
-            <a href="logout.php">Log Out</a>
+            <a href="logout.php">Log Out <i class="fas fa-sign-out-alt"></i></a>
             <?php
-                $user_id = 1;
+                $user_id = (int) $_SESSION["userId"];
 
                 $db = pg_connect("host=ec2-54-83-204-230.compute-1.amazonaws.com port=5432 dbname=d3543m9j6kgfsp user=fiaajpoaucvhfo password=8ea88d18e1cd3b174c4a8572cdd658544d8030a9b44769b0ab38299bddca0033");
                 $result = pg_query($db,"SELECT id, item, complete FROM shopping_list WHERE id = $user_id");

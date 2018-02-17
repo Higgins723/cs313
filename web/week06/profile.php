@@ -1,6 +1,7 @@
 <?php
     include("../includes/header.php");
     include("login.php");
+    include("manageItems.php");
 
     // if not logged in redirect to index
     if(!isset($_SESSION["userId"])) {
@@ -50,10 +51,30 @@
                                 echo "<i class='far fa-square'></i>";
                             }
                         echo "</td>";
-                        echo "<td></td>";
+
+                        echo "<td>";
+                            echo "<form class='form-inline my-2 my-lg-0' action='' method='post'>";
+                                echo "<input type='hidden' value='" . $row['item'] . "' name='itemNameComplete' id='itemNameComplete'>";
+                                if ($row['complete'] !== 't') {
+                                    echo "<button class='btn btn-success' name='complete' id='complete' type='submit'>Mark Complete</button>";
+                                }
+                            echo "</form>";
+
+                            echo "<form class='form-inline my-2 my-lg-0' action='' method='post'>";
+                                echo "<input type='hidden' value='" . $row['item'] . "' name='itemNameDelete' id='itemNameDelete'>";
+                                if ($row['complete'] == 't') {
+                                    echo "<button class='btn btn-danger' name='delete' id='delete' type='submit'>Delete</button>";
+                                }
+                            echo "</form>";
+                        echo "</td>";
                     echo "</tr>";}
                 echo "</table>";
             ?>
+            <form class="form-inline my-2 my-lg-0" action="" method="post">
+                <input class="form-control mr-sm-2" id="item" name="item" type="text" placeholder="Add Item">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="submit" name="submit" type="submit">Add</button>      
+            </form>
+            <span style="color:red;"><?php echo $error; ?></span>
             <hr/>
         </div>
     </div>

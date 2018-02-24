@@ -36,6 +36,7 @@
               <a class="dropdown-item" href="/week03/index.php">Week 03</a>
               <a class="dropdown-item" href="/week05/">Week 05</a>
               <a class="dropdown-item" href="/week06/">Week 06</a>
+              <a class="dropdown-item" href="/week07/">Week 07</a>
             </div>
           </li>
         </ul>
